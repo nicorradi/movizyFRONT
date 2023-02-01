@@ -37,7 +37,7 @@ function Home() {
   );
 
   useEffect(() => {
-    fetch("https://movizy-back-y43w.vercel.app/movies")
+    fetch("https://movizy-back.vercel.app/movies")
       .then((response) => response.json())
       .then((data) => {
         console.log("data.movies >", data.movies);
