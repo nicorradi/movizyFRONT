@@ -37,13 +37,13 @@ function Home() {
   );
 
   useEffect(() => {
-    fetch("http://localhost:3000/movies")
+    fetch("https://movizy-back-y43w.vercel.app/movies")
       .then((response) => response.json())
       .then((data) => {
         console.log("data.movies >", data.movies);
         setTABmovies(data.movies);
       });
-  }, []);
+  }, []) ;
 
   const movies = TABmovies.map((data, i) => {
     const isLiked = likedMovies.some((movie) => movie === data.title);
@@ -93,4 +93,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home ;
